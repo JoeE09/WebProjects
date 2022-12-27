@@ -1,0 +1,4 @@
+keydown: Keydown happens when the key is pressed down, and auto repeats if the key is pressed down for long.
+keypress: This event is fired when an alphabetic, numeric, or punctuation key is pressed down.
+keyup: Keyup happens when the key is released.
+
