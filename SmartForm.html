@@ -3,22 +3,54 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Smart Form</title>
+        <title>Coder Survey Form</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="SmartForm.css">
     </head>
     <body>
         <main>
-            <h1 id="title">Are You Smart?</h1>
-            <p id="description">Take this test to find out how smart you are.</p>
+            <h1 id="title">Coder Survey Form</h1>
+            <p id="description">Help us by filling out this brief survey.</p>
             <form action="" method="get" id="survey-form">
                 <fieldset>
-                    <input type="text" id="name" name="Name" placeholder="Enter Your Name">
-                
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" name="Name" placeholder="Enter Your Name" required>
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" name="Email" placeholder="Enter your Email" required>
+                    <label for="age" id="number-label">Age(optional)</label>
+                    <input type="number" id="number" name="Age" min="5" max="120" placeholder="Age">
+                    <label for="occupation">What is your current occupation?</label>
+                    <select name="occupation" id="dropdown" required>
+                        <option value="">Choose your occupation</option>
+                        <option value="CS Student">CS Student</option>
+                        <option value="Other Student">Other Student</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Non-Coding Job">Non-Coding Job</option>
+                        <option value="Junior Coding Job">Junior Coding Job</option>
+                        <option value="Senior Coding Job">Senior Coding Job</option>
+                    </select>
                 </fieldset>
+                <fieldset>
+                    <p>Were you able to find the resources that you needed?</p>
+                    <label for="yes"></label><input type="radio" id="yes" name="found-resources" value="Yes" checked> Yes</label>
+                    <label for="mostly"><input type="radio" id="mostly" name="found-resources" value="Mostly"> Mostly</label>
+                    <label for="no"></label><input type="radio" id="no" name="found-resources" value="No"> No</label>
+                </fieldset>
+                <fieldset>
+                    <p>What resources did you find useful?</p>
+                    <label for="python"><input type="checkbox" id="python" value="python"> Python Tutorials</label>
+                    <label for="web-dev"><input type="checkbox" id="web-dev" value="web-dev"> Web Development Tutorials</label>
+                    <label for="java"><input type="checkbox" id="java" value="java"> Java Tutorials</label>
+                    <label for="coding-challenges"><input type="checkbox" id="coding-challenges" value="coding-challenges"> Coding Challenges</label>
+                    <label for="forum"><input type="checkbox" id="forum" value="forum"> Coding Forum</label>
+                </fieldset>
+                <fieldset>
+                    <p>Please give us any additional feedback</p>
+                    <textarea name="feedback" id="feedback" cols="56" rows="10" placeholder="Enter your feedback here..."></textarea>
+                </fieldset>
+                <button type="sumbit" id="submit">Submit</button>
             </form>
-            <button type="sumbit">Submit</button>
         </main>
     </body>
 </html>
