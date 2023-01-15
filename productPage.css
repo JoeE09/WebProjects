@@ -66,6 +66,8 @@ header{
 .intro{
     margin-top: calc(75px + 1rem);
     text-align: center;
+    background-image: url("CoolCity.jpg");
+    height: 2500px;
 }
 .intro h1{
     font-size: 4rem;
